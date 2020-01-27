@@ -69,6 +69,7 @@
 	  <label for="house number">Number*</label><br>
 	  <input type="number" id="house number" name="hn" required="required" placeholder="House number" />
 	</p>
+      </form>
 	<p>
 	  <label for="Payment option">Payment option*</label><br>
 	  <select id="payment option" name="po">
@@ -78,8 +79,19 @@
 	    <option>Direct Bank Transfer</option>
 	  </select>
 	</p>
-      </form>
-      <small><p>*Fields with an asterisk are mandatory</p></small>
+	<form>
+	  <p>
+	    <label for="gender">Gender*</label><br>
+	    <input type="radio" id="male" name="gender">
+	    <label for="male">Male</label><br>
+	    <input type="radio" id="female" name="gender">
+	    <label for="female">Female</label><br>
+	    <input type="radio" id="other" name="gender">
+	    <label for="other">Other</label><br>
+	    <input type="radio" id="prefer not to say" name="gender" checked="checked">
+	    <label for="prefer not to say">Prefer not to say</label><br>
+	</form>
+	<small><p>*Fields with an asterisk are mandatory</p></small>
     </section>
     <hr>
     <footer>
