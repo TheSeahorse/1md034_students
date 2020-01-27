@@ -41,18 +41,36 @@
 	    </td>
 	    <td>
 	      <ul>
-		<li>Does this even count as a burger?(not veggie)</li>
+		<li>Does this even count as a burger? (not veggie)</li>
 		<li>Looks like a sandwich so prob only 100 cals</li>
-		<li>Contains the souls of Soobway employees</li>
+		<li>Contains the soul of a Soobway employee</li>
 	      </ul>
 	    </td>
 	  </tr>
 	</tbody>
       </table>
     </section>
-    <section>
+    <section id="contact">
       <h2>Billing Details</h2>
-      <p>Details here</p>
+      <form>
+	<p>
+	  <label for="full name">Full name*</label><br>
+	  <input type="text" id="full name" name="name" required="required" placeholder="First- and Last name" />
+	</p>
+	<p>
+	  <label for="E-mail">E-mail*</label><br>
+	  <input type="text" id="email" name="email" required="required" placeholder="E-mail adress" />
+	</p>
+	<p>
+	  <label for="street name">Street*</label><br>
+	  <input type="text" id="streetname" name="sn" required="required" placeholder="Street name" />
+	</p>
+	<p>
+	  <label for="house number">Number*</label><br>
+	  <input type="number" id="house number" name="hn" required="required" placeholder="House number" />
+	</p>
+      </form>
+      <small><p>*Fields with an asterisk are mandatory</p></small>
     </section>
     <hr>
     <footer>
