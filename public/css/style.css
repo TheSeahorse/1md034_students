@@ -5,6 +5,19 @@ body {
     font-size: 14pt;
 }
 
+.header2 {
+    text-align: center;
+}
+
 #gluten {
     font-weight: bold;
+}
+
+#burgerselect {
+    color: white;
+    background: black;
+}
+
+#contact {
+
 }
