@@ -6,7 +6,24 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.header1 {
+    text-align: center;
+    position: absolute;
+    padding: 350px 600px 350px 600px;
+}
+
+header {
+    margin: 32px;
+    heigth: 300px;
+    overflow: hidden;
+}
+
+#bannerpic {
+    width: auto;
+    heigth: 100%;
+}
+
+.header2 {
     text-align: center;
 }
 
@@ -17,16 +34,6 @@ table {
 
 #gluten {
     font-weight: bold;
-}
-
-#bannerpic {
-    opacity: 0.7;
-}
-
-#banner {
-    margin: 30px;
-    heigth: 300px;
-    overflow: hidden;
 }
 
 #burgerselect {
