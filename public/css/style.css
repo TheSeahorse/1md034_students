@@ -27,10 +27,13 @@ table {
     color: white;
     background: black;
     margin: 30px;
+    border: 2px dashed white;
 }
 
 #contact {
+    border: 3px dashed black;
     margin: 30px;
+    padding-left: 25px;
 }
 
 input[type="radio"] {
