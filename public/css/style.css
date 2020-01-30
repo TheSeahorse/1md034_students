@@ -26,10 +26,11 @@ table {
 #burgerselect {
     color: white;
     background: black;
+    margin: 30px;
 }
 
 #contact {
-
+    margin: 30px;
 }
 
 input[type="radio"] {
@@ -37,7 +38,15 @@ input[type="radio"] {
     width: 1.5em;
 }
 
+button {
+    margin: 10px 4px;
+}
+
 button:hover {
     background-color: lightgreen;
     cursor:pointer;
+}
+
+footer {
+    margin: 5px 30px;
 }
