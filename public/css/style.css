@@ -3,10 +3,20 @@
 body {
     font-family: arial;
     font-size: 14pt;
+    margin: 0 auto;
 }
 
 .header {
     text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 1.5vw;
+}
+
+#burgpic {
+    width: 300;
 }
 
 #gluten {
