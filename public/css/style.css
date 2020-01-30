@@ -5,7 +5,7 @@ body {
     font-size: 14pt;
 }
 
-.header2 {
+.header {
     text-align: center;
 }
 
@@ -20,4 +20,14 @@ body {
 
 #contact {
 
+}
+
+input[type="radio"] {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+button:hover {
+    background-color: lightgreen;
+    cursor:pointer;
 }
