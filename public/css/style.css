@@ -12,15 +12,21 @@ body {
 
 table {
     margin: auto;
-    width: 1.5vw;
-}
-
-#burgpic {
-    width: 300;
+    width: 1.5%;
 }
 
 #gluten {
     font-weight: bold;
+}
+
+#bannerpic {
+    opacity: 0.7;
+}
+
+#banner {
+    margin: 30px;
+    heigth: 300px;
+    overflow: hidden;
 }
 
 #burgerselect {
