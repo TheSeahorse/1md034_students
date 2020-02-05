@@ -21,3 +21,9 @@ console.log( burger2.info() );
 console.log( burger3.info() );
 console.log( burger4.info() );
 console.log( burger5.info() );
+
+document.getElementById("burg1").innerHTML = burger1.info();
+document.getElementById("burg2").innerHTML = burger2.info();
+document.getElementById("burg3").innerHTML = burger3.info();
+document.getElementById("burg4").innerHTML = burger4.info();
+document.getElementById("burg5").innerHTML = burger5.info();
