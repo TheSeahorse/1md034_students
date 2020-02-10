@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="https://vuejs.org/js/vue.js" defer></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Burger Sling</title>
     <meta charset="utf-8"/> <!-- This is a useless comment -->
@@ -16,34 +16,15 @@
       </header>
       <section id="burgerselect">
 	<h2 class="header2">Select a burger</h2>
-	<div class="wrapper">
-	  <div class="box burger one"><h3>The Meat Peak</h3></div>
-	  <div class="box burger two"><h3>The Improbable Burger</h3></div>
-	  <div class="box burger three"><h3>The Barely a Burger Burger</h3></div>
-	  <div class="box img one"><img src="https://i.imgur.com/hlI0BUG.png" alt="The Meat Peak" title="The Meat Peak" width="300"> </div>
-	  <div class="box img two"><img src="https://non-gmoreport.com/wp-content/uploads/2019/11/Impossible-burger_transp-800x600.png" width="300"> </div>
-	  <div class="box img three"><img src="https://www.pngkit.com/png/full/180-1802263_subway-sandwich-png-subway-american-steakhouse-melt.png" width="300" alt="The Barely a Burger Burger" title="The Barely a Burger Burger"> </div>
-	  <div class="box list one">
+	<div class="wrapper" id="bs">
+	  <div v-for="burger in menu">
+	    <h3> {{ burger.name }} </h3>
+	    <img class="img" v-bind:src="burger.img">
 	    <ul>
-	      <li>A lot of meat (not vegetarian, duh)</li>
-	      <li>Over 9000 cals</li>
-	      <li class="allergy"><span id="gluten">Don't eat</span> if you're allergic to anything</li>
+	      <li> {{ burger.description }} </li>
+	      <li v-if="burger.lactose"> Contains lactose </li>
+	      <li v-if="burger.gluten"> Contains gluten </li>
 	    </ul>
-	  </div>
-	  <div class="box list two">
-	    <ul>
-	      <li>It's vegetarian, we promise</li>
-	      <li>Still a lot of calories though</li>
-	      <li class="allergy">Not <span id="gluten">gluten</span> or <span id="gluten">lactose</span> free</li>
-	    </ul>
-	  </div>
-	  <div class="box list three">
-	    <ul>
-	      <li>Does this even count as a burger? (not veggie)</li>
-	      <li>Looks like a sandwich so prob only 100 cals</li>
-	      <li class="allergy">Contains the soul of a <span id="gluten">Soobway employee</span></li>
-	    </ul>
-	  </div>
 	</div>
       </section>
       <section id="contact">

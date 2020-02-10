@@ -1,7 +1,6 @@
-/*
-<script src="https://vuejs.org/js/vue.js"></script>
 
-<div id="burgerList">
+/*
+<div id="bs">
   <h1>
     "Välj en burgare"
   </h1>
@@ -22,8 +21,9 @@
 */
 
 const vm = new Vue ({
-	el: '#burgerList',
-  	data: {
-    menu
+    el: '#bs',
+    data: {
+	menu
     }
 })
+

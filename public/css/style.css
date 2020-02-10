@@ -69,21 +69,12 @@ footer {
 
 .wrapper {
     display: grid;
+    grid-template-columns: 300px 300px 300px 300px 300px;
     grid-gap: 5px;
 }
 
-.burger {
-    grid-row: 1;
-    margin: auto auto;
-}
 
 .img {
-    grid-row: 2;
-    margin: auto auto;
+    width: 300px;
 }
 
-.list {
-    grid-row: 3;
-    text-align: center;
-    margin: auto auto;
-}
