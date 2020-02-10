@@ -1,34 +1,29 @@
-const b1 = new Vue({
-	el: '#burg1',
-  data: {
-  	burger: burger1.info()
-  }
-})
+/*
+<script src="https://vuejs.org/js/vue.js"></script>
 
-const b2 = new Vue({
-	el: '#burg2',
-  data: {
-  	burger: burger2.info()
-  }
-})
+<div id="burgerList">
+  <h1>
+    "Välj en burgare"
+  </h1>
+  <div v-for="burger in menu">
+    {{ burger.name }}
+    <img v-bind:src="burger.img">
+    <p>
+    {{ burger.desc }}
+    </p>
+    <p v-if="burger.lactose">
+    Contains lactose
+    </p>
+    <p v-if="burger.gluten">
+    Contains gluten
+    </p>
+  </div>
+</div>
+*/
 
-const b3 = new Vue({
-	el: '#burg3',
-  data: {
-  	burger: burger3.info()
-  }
-})
-
-const b4 = new Vue({
-	el: '#burg4',
-  data: {
-  	burger: burger4.info()
-  }
-})
-
-const b5 = new Vue({
-	el: '#burg5',
-  data: {
-  	burger: burger5.info()
-  }
+const vm = new Vue ({
+	el: '#burgerList',
+  	data: {
+    menu
+    }
 })
