@@ -23,7 +23,7 @@
 const vm = new Vue ({
     el: '#bs',
     data: {
-	menu
+	food
     }
 })
 

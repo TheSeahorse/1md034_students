@@ -1,3 +1,4 @@
+/*
 function menuItem(name, img, desc, kcal, gluten, lactose) {
     this.name = name;
     this.img = img;
@@ -17,7 +18,7 @@ let burger4 = new menuItem('The Whoopsie', 'https://www.stickpng.com/assets/imag
 let burger5 = new menuItem('The Friskis', 'https://www.gamereactor.se/media/forum/se/16627244_42.jpg', 'We did copy this one from MAX though ngl', '789 kcal (I actually don\'t know I\'m just making this shit up)', false, true);
 
 let menu = [ burger1, burger2, burger3, burger4, burger5 ];
-/*
+
 let wrapper = document.getElementById("bs");
 
 let burger;
