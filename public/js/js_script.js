@@ -67,4 +67,28 @@ for (burger of menu) {
   "Välj en burgare"
   </h1>
   </div>
+
+let allInfo;
+
+function printClicked() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let streetname = document.getElementById("streetname").value;
+    let housenr = document.getElementById("housenr").value;
+    let payment = document.getElementById("payment").value;
+    let genders = document.getElementsByName("gender");
+    let savedGender;
+    for (let gender in genders) {
+	if (genders[gender].checked) {
+	    savedGender = genders[gender];
+	    break;
+	}
+    }
+    allInfo = [name, email, streetname, housenr, payment, savedGender]
+    console.log(allInfo);
+}
+
+let button = document.getElementById('submitbutton');
+
+button.onclick = printClicked
 */

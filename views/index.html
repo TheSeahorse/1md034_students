@@ -27,31 +27,33 @@
 	      <li v-if="burger.lactose"> Contains lactose </li>
 	      <li v-if="burger.gluten"> Contains gluten </li>
 	    </ul>
+	    <input type="checkbox" class="addtocart" v-bind:id="burger.name" v-bind:value="burger.name" v-model="burgerCheck">
+	    <label for="burger.name">Add to cart</label>
 	</div>
       </section>
       <section id="contact">
 	<h2>Billing Details</h2>
-	<form>
+	<form id="contactinfo">
 	  <p>
 	    <label for="full name">Full name*</label><br>
-	    <input type="text" id="full name" name="name" required="required" placeholder="First- and Last name" />
+	    <input v-model="vname" type="text" id="name" name="name" required="required" placeholder="First- and Last name" />
 	  </p>
 	  <p>
 	    <label for="E-mail">E-mail*</label><br>
-	    <input type="text" id="email" name="email" required="required" placeholder="E-mail adress" />
+	    <input v-model="vemail" type="text" id="email" name="email" required="required" placeholder="E-mail adress" />
 	  </p>
 	  <p>
 	    <label for="street name">Street*</label><br>
-	    <input type="text" id="streetname" name="sn" required="required" placeholder="Street name" />
+	    <input v-model="vstreetname" type="text" id="streetname" name="sn" required="required" placeholder="Street name" />
 	  </p>
 	  <p>
 	    <label for="house number">Number*</label><br>
-	    <input type="number" id="house number" name="hn" required="required" placeholder="House number" />
+	    <input v-model="vhousenr" type="number" id="housenr" name="hn" required="required" placeholder="House number" />
 	  </p>
 	  <p>
 	    <label for="Payment option">Payment option*</label><br>
-	    <select id="payment option" name="po">
-	      <option selected="selected">Debit Card</option>
+	    <select v-model="vpayment" id="payment" name="po">
+	      <option>Debit Card</option>
 	      <option>Paypal</option>
 	      <option>Swish</option>
 	      <option>Direct Bank Transfer</option>
@@ -59,18 +61,22 @@
 	  </p>
 	  <p>
 	    <label for="gender">Gender*</label><br>
-	    <input type="radio" id="male" name="gender">
+	    <input type="radio" id="male" name="gender" value="Male" v-model="vgenders">
 	    <label for="male">Male</label><br>
-	    <input type="radio" id="female" name="gender">
+	    <input type="radio" id="female" name="gender" value="Female" v-model="vgenders">
 	    <label for="female">Female</label><br>
-	    <input type="radio" id="other" name="gender">
+	    <input type="radio" id="other" name="gender" value="Other" v-model="vgenders">
 	    <label for="other">Other</label><br>
-	    <input type="radio" id="prefer not to say" name="gender" checked="checked">
+	    <input type="radio" id="prefer not to say" name="gender" value="Prefer not to say" v-model="vgenders">
 	    <label for="prefer not to say">Prefer not to say</label><br>
-	    
-	    <button id="submitbutton" type="submit"><img src="https://clipartart.com/images/check-mark-clipart-transparent.jpg" width="12" heigth="12"/>Send</button>
 	    <small><p>*Fields with an asterisk are mandatory</p></small>
+	    <p>Current order info: {{ vname }} {{ vemail }} {{ vstreetname }} {{ vhousenr }} {{vpayment }} {{ vgenders }}</p>
 	</form>
+	<div id="button">
+	  <button v-on:click="collectOrder" id="submitbutton" type="submit">
+	    <img src="https://clipartart.com/images/check-mark-clipart-transparent.jpg" width="12" heigth="12"/>Send
+	  </button>
+	</div>
       </section>
       <hr>
       <footer>

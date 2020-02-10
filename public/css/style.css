@@ -70,6 +70,7 @@ footer {
 .wrapper {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px 300px;
+    margin: auto auto;
     grid-gap: 5px;
 }
 

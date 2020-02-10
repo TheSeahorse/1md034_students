@@ -1,29 +1,42 @@
-
-/*
-<div id="bs">
-  <h1>
-    "Välj en burgare"
-  </h1>
-  <div v-for="burger in menu">
-    {{ burger.name }}
-    <img v-bind:src="burger.img">
-    <p>
-    {{ burger.desc }}
-    </p>
-    <p v-if="burger.lactose">
-    Contains lactose
-    </p>
-    <p v-if="burger.gluten">
-    Contains gluten
-    </p>
-  </div>
-</div>
-*/
-
-const vm = new Vue ({
+const vm1 = new Vue ({
     el: '#bs',
     data: {
-	food
+	food,
+	burgerCheck: ""
     }
 })
 
+const vm2 = new Vue ({
+    el: '#button',
+    methods: {
+	collectOrder: function() {
+	    let name = document.getElementById("name").value;
+	    let email = document.getElementById("email").value;
+	    let streetname = document.getElementById("streetname").value;
+	    let housenr = document.getElementById("housenr").value;
+	    let payment = document.getElementById("payment").value;
+	    let genders = document.getElementsByName("gender");
+	    let savedGender;
+	    for (let gender in genders) {
+		if (genders[gender].checked) {
+		    savedGender = genders[gender];
+		    break;
+		}
+	    }
+	    allInfo = [name, email, streetname, housenr, payment, savedGender]
+	    console.log(allInfo);
+	}
+    }
+})
+
+const vm3 = new Vue ({
+    el: '#contactinfo',
+    data: {
+	vname: "",
+	vemail: "",
+	vstreetname: "",
+	vhousenr: "",
+	vpayment: "Debit Card",
+	vgenders: "Prefer not to say"
+    }
+})
