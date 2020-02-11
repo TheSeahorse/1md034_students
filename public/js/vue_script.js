@@ -1,11 +1,33 @@
-const vm1 = new Vue ({
-    el: '#bs',
+const vm = new Vue ({
+    el: '#main',
     data: {
 	food,
-	burgerCheck: ""
+	burgerCheck: [],
+	burgerDisplay: "",
+	vname: "",
+	vemail: "",
+	vstreetname: "",
+	vhousenr: "",
+	vpayment: "Debit Card",
+	vgenders: "Prefer not to say"
+    },
+    methods: {
+	collectOrder: function() {
+	    let allInfo = [this.vname, this.vemail, this.vstreetname, this.vhousenr, this.vpayment, this.vgenders, this.burgerCheck];
+	    console.log(allInfo);
+	    this.burgerDisplay = "";
+	    for (let item in this.burgerCheck) {
+		if (item != 0) {
+		    this.burgerDisplay += ", ";
+		}
+		this.burgerDisplay += this.burgerCheck[item];
+	    }
+	}
     }
+    
 })
 
+/*
 const vm2 = new Vue ({
     el: '#button',
     methods: {
@@ -40,3 +62,4 @@ const vm3 = new Vue ({
 	vgenders: "Prefer not to say"
     }
 })
+*/

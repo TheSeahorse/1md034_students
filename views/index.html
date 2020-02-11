@@ -10,7 +10,7 @@
     <meta charset="utf-8"/> <!-- This is a useless comment -->
   </head>
   <body>
-    <main>
+    <main id="main">
       <header id="banner">
 	<h1 class="header1">Welcome to Burger Sling</h1>
 	<img id="bannerpic" src="https://i.ya-webdesign.com/images/png-white-banner-4.png" title="page banner">
@@ -70,7 +70,7 @@
 	    <input type="radio" id="prefer not to say" name="gender" value="Prefer not to say" v-model="vgenders">
 	    <label for="prefer not to say">Prefer not to say</label><br>
 	    <small><p>*Fields with an asterisk are mandatory</p></small>
-	    <p>Current order info: {{ vname }} {{ vemail }} {{ vstreetname }} {{ vhousenr }} {{vpayment }} {{ vgenders }}</p>
+	    <p>Current order info: {{ vname }} {{ vemail }} {{ vstreetname }} {{ vhousenr }} {{vpayment }} {{ vgenders }} {{ burgerDisplay }}</p>
 	</form>
 	<div id="button">
 	  <button v-on:click="collectOrder" id="submitbutton" type="submit">
