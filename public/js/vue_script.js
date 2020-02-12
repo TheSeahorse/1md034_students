@@ -48,6 +48,7 @@ const vm = new Vue ({
 		orderId: this.getNext(),
 		details: this.localOrder,
 		orderItems: this.burgerCheck,
+		orderInfo: allInfo,
 	    });
 	},
 	displayOrder: function(event) {
