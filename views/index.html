@@ -3,6 +3,7 @@
   <head>
     <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="https://vuejs.org/js/vue.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -10,11 +11,11 @@
     <meta charset="utf-8"/> <!-- This is a useless comment -->
   </head>
   <body>
+    <header id="banner">
+      <h1 class="header1">Welcome to Burger Sling</h1>
+      <img id="bannerpic" src="https://i.ya-webdesign.com/images/png-white-banner-4.png" title="page banner">
+    </header>
     <main id="main">
-      <header id="banner">
-	<h1 class="header1">Welcome to Burger Sling</h1>
-	<img id="bannerpic" src="https://i.ya-webdesign.com/images/png-white-banner-4.png" title="page banner">
-      </header>
       <section id="burgerselect">
 	<h2 class="header2">Select a burger</h2>
 	<div class="wrapper" id="bs">
@@ -43,14 +44,6 @@
 	    <input v-model="vemail" type="text" id="email" name="email" required="required" placeholder="E-mail adress" />
 	  </p>
 	  <p>
-	    <label for="street name">Street*</label><br>
-	    <input v-model="vstreetname" type="text" id="streetname" name="sn" required="required" placeholder="Street name" />
-	  </p>
-	  <p>
-	    <label for="house number">Number*</label><br>
-	    <input v-model="vhousenr" type="number" id="housenr" name="hn" required="required" placeholder="House number" />
-	  </p>
-	  <p>
 	    <label for="Payment option">Payment option*</label><br>
 	    <select v-model="vpayment" id="payment" name="po">
 	      <option>Debit Card</option>
@@ -69,8 +62,18 @@
 	    <label for="other">Other</label><br>
 	    <input type="radio" id="prefer not to say" name="gender" value="Prefer not to say" v-model="vgenders">
 	    <label for="prefer not to say">Prefer not to say</label><br>
-	    <small><p>*Fields with an asterisk are mandatory</p></small>
-	    <p>Current order info: {{ vname }} {{ vemail }} {{ vstreetname }} {{ vhousenr }} {{vpayment }} {{ vgenders }} {{ burgerDisplay }}</p>
+	  </p>
+	  <div class="view-box">
+	    <div id="dots" v-on:click="addOrder">
+              <div 
+		v-for="(order, key) in orders"
+		v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+		{{key}}
+              </div>
+	    </div>
+	  </div>
+	  <small><p>*Fields with an asterisk are mandatory</p></small>
+	  <p>Current order info: {{ vname }} {{ vemail }} {{vpayment }} {{ vgenders }} {{ burgerDisplay }}</p>
 	</form>
 	<div id="button">
 	  <button v-on:click="collectOrder" id="submitbutton" type="submit">
@@ -79,9 +82,9 @@
 	</div>
       </section>
       <hr>
-      <footer>
-	<p>© Burger Sling Co. 2020-2020</p>
-      </footer>
     </main>
+    <footer>
+      <p>© Burger Sling Co. 2020-2020</p>
+    </footer>
   </body>
 </html>
