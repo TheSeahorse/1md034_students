@@ -64,11 +64,11 @@
 	    <label for="prefer not to say">Prefer not to say</label><br>
 	  </p>
 	  <div class="view-box">
-	    <div id="dots" v-on:click="addOrder">
-              <div 
-		v-for="(order, key) in orders"
-		v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-		{{key}}
+	    <div id="dots" v-on:click="displayOrder">
+              <div
+		v-if="localOrder.x != -420"
+		v-bind:style="{ left: localOrder.x + 'px', top: localOrder.y + 'px'}">
+		T
               </div>
 	    </div>
 	  </div>
@@ -76,7 +76,7 @@
 	  <p>Current order info: {{ vname }} {{ vemail }} {{vpayment }} {{ vgenders }} {{ burgerDisplay }}</p>
 	</form>
 	<div id="button">
-	  <button v-on:click="collectOrder" id="submitbutton" type="submit">
+	  <button v-on:click="addOrders" id="submitbutton" type="submit">
 	    <img src="https://clipartart.com/images/check-mark-clipart-transparent.jpg" width="12" heigth="12"/>Send
 	  </button>
 	</div>
